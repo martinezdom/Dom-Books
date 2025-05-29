@@ -12,5 +12,28 @@
 }
 
 .form-field {
-    @apply border-2 border-primary p-2 rounded-md block w-full
+    @apply border-2 border-primary p-2 rounded-md block w-full;
+}
+
+.message {
+    @apply inline-flex justify-center items-center gap-3 py-4 px-6 rounded-md mb-4 min-w-3/12;
+}
+
+.message-success {
+    @apply bg-green-700;
+}
+
+.message-error {
+    @apply bg-red-700;
+}
+
+.button--close {
+    @apply px-2 rounded-full bg-white text-lg hover:border-2 hover:border-white transition-all duration-200 cursor-pointer;
+}
+.button--close--success {
+    @apply text-green-700 border-2 border-green-700 hover:text-white hover:bg-green-700;
+}
+
+.button--close--error {
+    @apply text-red-700 border-2 border-red-700 hover:text-white hover:bg-red-700;
 }

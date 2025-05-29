@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <header class="bg-secondary/60 rounded-b-2xl border-b-2">
+  <header class="bg-secondary/60 rounded-b-2xl border-b-2 mb-8">
     <nav class="flex flex-col p-4 gap-2 lg:flex-row lg:justify-between lg:px-20">
       <div class="flex items-center justify-center w-15 mx-auto lg:mx-0">
         <router-link to="/">

@@ -28,12 +28,9 @@ export default {
 
 <template>
   <app-menu></app-menu>
-  <main class="max-w-4/5 mx-auto my-4 p-4">
+  <main class="flex-1 max-w-4/5 mx-auto">
     <app-messages></app-messages>
     <router-view></router-view>
   </main>
-  <footer class="flex justify-center items-center p-4 bg-secondary/60 rounded-t-2xl border-t-2 text-center"><a href="https://github.com/martinezdom" class="underline font-bold hover:text-secondary hover:bg-white transition-colors">Miguel Ángel Martínez<br>@martinezdom</a></footer>
+  <footer class="flex justify-center items-center p-4 bg-secondary/60 rounded-t-2xl border-t-2 text-center mt-8"><a href="https://github.com/martinezdom" target="_blank" class="underline font-bold hover:text-secondary hover:bg-white transition-colors">Miguel Ángel Martínez<br>@martinezdom</a></footer>
 </template>
-
-<style>
-</style>

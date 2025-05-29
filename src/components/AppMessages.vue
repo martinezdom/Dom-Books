@@ -13,12 +13,13 @@ export default {
 </script>
 
 <template>
-    <div v-for="(message, index) in messages" :key="index" :class="['alert', `alert-${message.type}`]" role="alert"
-        id="messages">
-        {{ message.text }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
-            @click="deleteMessage(index)">
-            x
-        </button>
+    <div class="flex flex-col justify-center items-center">
+        <div v-for="(message, index) in messages" :key="index" :class="['message', `message-${message.type}`]"
+            id="messages">
+            {{ message.text }}
+            <button type="button" :class="['button--close', `button--close--${message.type}`]" @click="deleteMessage(index)">
+                <span><i class="bi bi-x"></i></span>
+            </button>
+        </div>
     </div>
 </template>
