@@ -22,7 +22,7 @@ export default {
 <template>
   <header class="bg-secondary/60 rounded-b-2xl border-b-2">
     <nav class="flex flex-col p-4 gap-2 lg:flex-row lg:justify-between lg:px-20">
-      <div class="flex items-center justify-center bg-white w-15 rounded-2xl mx-auto lg:mx-0">
+      <div class="flex items-center justify-center w-15 mx-auto lg:mx-0">
         <router-link to="/">
           <img alt="Logo web" class="logo size-10 hover:scale-110 transition-transform" :src="logoDomBooks" />
         </router-link>

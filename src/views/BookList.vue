@@ -19,6 +19,7 @@ export default {
 </script>
 
 <template>
+    <h1 class="text-center text-2xl font-bold mb-4">Total de libros: {{ totalDeLibros }}</h1>
     <div id="list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
         <book-item v-for="book in books" :key="book.id" :book="book">
             <button class="addCart button" @click="addBookToCart(book)" v-if="!bookOnCart(book.id)">

@@ -8,5 +8,9 @@
 }
 
 .button {
-    @apply hover:bg-primary hover:text-white transition-colors px-2 py-1 rounded-4xl cursor-pointer;
+    @apply bg-secondary text-white border-2 border-secondary hover:bg-white hover:text-primary hover:border-2 hover:border-secondary transition-colors px-2 py-1 rounded-4xl cursor-pointer;
+}
+
+.form-field {
+    @apply border-2 border-primary p-2 rounded-md block w-full
 }

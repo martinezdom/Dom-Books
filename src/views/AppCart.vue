@@ -16,12 +16,12 @@ import BookItem from "../components/BookItem.vue"
 </script>
 
 <template>
-    <h1>Total de libros en el carrito: {{ totalDeLibrosEnCarrito }}</h1>
+    <h1 class="text-center text-2xl font-bold mb-4">Total de libros en el carrito: {{ totalDeLibrosEnCarrito }}</h1>
     <div id="list">
         <book-item v-for="book in booksOnCart" :key="book.id" :book="book">
-            <button type="button" @click="deleteBookFromCart(book.id)"><span class="material-icons">delete</span></button>
+            <button class="button" type="button" @click="deleteBookFromCart(book.id)"><span><i class="bi bi-cart-dash"></i></span></button>
         </book-item>
     </div>
-        <button class="botonCarrito" type="button" @click="makePurchase"><span class="material-icons">check_circle</span></button>
-        <button class="botonCarrito" type="button" @click="deleteAllBooksFromCart"><span class="material-icons">close</span></button>
+        <button class="button" type="button" @click="makePurchase"><span><i class="bi bi-check-circle"></i></span></button>
+        <button class="button" type="button" @click="deleteAllBooksFromCart"><span><i class="bi bi-x-circle"></i></span></button>
 </template>

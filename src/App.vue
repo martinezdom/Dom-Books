@@ -32,7 +32,7 @@ export default {
     <app-messages></app-messages>
     <router-view></router-view>
   </main>
-  <footer class="flex justify-center items-center p-4 bg-secondary/60 rounded-t-2xl border-t-2"><p>Miguel Ángel Martínez</p></footer>
+  <footer class="flex justify-center items-center p-4 bg-secondary/60 rounded-t-2xl border-t-2 text-center"><a href="https://github.com/martinezdom" class="underline font-bold hover:text-secondary hover:bg-white transition-colors">Miguel Ángel Martínez<br>@martinezdom</a></footer>
 </template>
 
 <style>
