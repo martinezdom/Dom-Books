@@ -20,20 +20,20 @@ export default {
     ...mapActions(useDataStore, ['populateBooks', 'populateModules']),
   },
   mounted() {
-      this.populateBooks()
-      this.populateModules()
+    this.populateBooks()
+    this.populateModules()
   }
 }
 </script>
 
 <template>
-    <app-menu></app-menu>
+  <app-menu></app-menu>
+  <main class="max-w-4/5 mx-auto my-4 p-4">
     <app-messages></app-messages>
     <router-view></router-view>
-    <footer>Miguel Ángel Martínez</footer>
+  </main>
+  <footer class="flex justify-center items-center p-4 bg-secondary/60 rounded-t-2xl border-t-2"><p>Miguel Ángel Martínez</p></footer>
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
-
+<style>
 </style>
