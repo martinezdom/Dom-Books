@@ -1,10 +1,49 @@
 @import "tailwindcss";
-
+@plugin "@midudev/tailwind-animations";
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto.woff2') format('woff2');
+    font-weight: 100 700;
+    font-display: swap;
+    font-style: normal;
+}
 @theme {
-    --color-primary: #913e86;
-    --color-primary-opacity: rgba(145, 62, 134, 0.5);
-    --color-secondary: #420c2e;
-    --color-secondary-opacity: rgba(66, 12, 46, 0.6);
+    --color-primary: #606c38;
+    --color-secondary: #283618;
+    --color-text: #fff9cf;
     --text-mobile: 0.75rem;
     --text-desktop: 1rem;
+
+    --font-sans: 'Roboto', system-ui, sans-serif;
+}
+
+.button {
+    @apply bg-secondary text-text border-2 border-secondary hover:bg-white hover:text-secondary hover:border-2 hover:border-secondary transition-colors px-2 py-1 rounded-4xl cursor-pointer;
+}
+
+.form-field {
+    @apply border-2 border-primary p-2 rounded-md block w-full;
+}
+
+.message {
+    @apply inline-flex justify-center items-center gap-3 py-4 px-6 rounded-md mb-4 min-w-3/12;
+}
+
+.message-success {
+    @apply bg-green-700;
+}
+
+.message-error {
+    @apply bg-red-700;
+}
+
+.button--close {
+    @apply px-2 rounded-full bg-white text-lg hover:border-2 hover:border-white transition-all duration-200 cursor-pointer;
+}
+.button--close--success {
+    @apply text-green-700 border-2 border-green-700 hover:text-text hover:bg-green-700;
+}
+
+.button--close--error {
+    @apply text-red-700 border-2 border-red-700 hover:text-text hover:bg-red-700;
 }
