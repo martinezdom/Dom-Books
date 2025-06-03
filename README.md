@@ -1,6 +1,7 @@
 # 📚 Dom Books
 
-Dom Books es una aplicación web para la gestión y compra de libros, desarrollada con **Vue 3**, **Pinia** y **TailwindCSS**. Permite añadir, editar y eliminar, así como gestionar un carrito de compra. El backend simulado utiliza **json-server** para facilitar el desarrollo y las pruebas.
+Dom Books es una aplicación web para la gestión y compra de libros, desarrollada con **Vue 3**, **Pinia** y **TailwindCSS**. Permite añadir, editar y eliminar libros, así como gestionar un carrito de compra. El backend simulado utiliza **json-server** para facilitar el desarrollo y las pruebas.  
+Además, el carrito de compra se guarda en **localStorage** para mantener los datos aunque cierres el navegador.
 
 ---
 
@@ -8,7 +9,7 @@ Dom Books es una aplicación web para la gestión y compra de libros, desarrolla
 
 - Listado de libros con información detallada.
 - Añadir, editar y eliminar libros.
-- Carrito de compra para gestionar adquisiciones.
+- Carrito de compra persistente (usa localStorage).
 - Validación de formularios con VeeValidate y Yup.
 - Mensajes de éxito y error con animaciones.
 - Diseño responsive con TailwindCSS.
@@ -70,7 +71,7 @@ La aplicación estará disponible en `http://localhost:5173` (o el puerto que in
 - **Añadir libro:** Desde el menú, opción "Añadir libro".
 - **Editar libro:** Botón de editar en cada libro.
 - **Eliminar libro:** Botón de eliminar en cada libro.
-- **Carrito:** Añade libros al carrito y gestiona la compra.
+- **Carrito:** Añade libros al carrito y gestiona la compra. El carrito se gestiona mediante localStorage.
 - **Mensajes:** Recibe mensajes de éxito o error en cada acción.
 
 ---

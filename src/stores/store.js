@@ -7,6 +7,7 @@ export const useDataStore = defineStore("data", {
       books: [],
       modules: [],
       messages: [],
+      messageIdCounter: 0,
       booksOnCart: JSON.parse(localStorage.getItem("booksOnCart")) || [],
     };
   },
@@ -71,14 +72,18 @@ export const useDataStore = defineStore("data", {
       }
     },
     async addMessage(message, type, timeout = 3000) {
-      this.messages.push({ text: message, type });
-      const index = this.messages.length - 1;
+      this.messageIdCounter++;
+      const id = this.messageIdCounter;
+      this.messages.push({ id, text: message, type });
       setTimeout(() => {
-        this.deleteMessage(index);
+        this.deleteMessageById(id);
       }, timeout);
     },
-    async deleteMessage(index) {
-      this.messages.splice(index, 1);
+    deleteMessageById(id) {
+      const index = this.messages.findIndex((msg) => msg.id === id);
+      if (index !== -1) {
+        this.messages.splice(index, 1);
+      }
     },
     async editBook(book) {
       try {

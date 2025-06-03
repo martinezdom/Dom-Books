@@ -21,14 +21,14 @@ export default {
 
 <template>
   <header class="bg-secondary/60 rounded-b-2xl border-b-2 mb-8">
-    <nav class="flex flex-col p-4 gap-2 lg:flex-row lg:justify-between lg:px-20">
+    <nav class="flex flex-col p-4 gap-2 lg:flex-row lg:justify-between lg:px-20 animate-fade-in-down">
       <div class="flex items-center justify-center w-15 mx-auto lg:mx-0">
         <router-link to="/">
           <img alt="Logo web" class="logo size-10 hover:scale-110 transition-transform" :src="logoDomBooks" />
         </router-link>
       </div>
       <div class="flex justify-center items-center">
-        <ul class="flex gap-10 text-mobile lg:text-desktop transition-all duration-300">
+        <ul class="flex gap-10 text-sm lg:text-lg">
           <menu-item v-for="item in menuItems" :key="item.to" :to="item.to" :label="item.label"></menu-item>
         </ul>
       </div>

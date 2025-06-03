@@ -63,7 +63,7 @@ export default {
 </script>
 
 <template>
-  <div id="form" class="bg-white text-primary py-6 px-12 rounded-lg">
+  <div id="form" class="bg-white text-primary py-6 px-12 rounded-lg shadow-lg shadow-secondary">
     <h3 v-if="!this.id" class="text-center text-2xl font-bold mb-3">Añadir libro</h3>
     <h3 v-else class="text-center text-2xl font-bold mb-3 ">Editando libro con ID: {{ this.id }}</h3>
     <Form id="bookForm" method="post" @submit="submitBook" :validation-schema="mySchema">

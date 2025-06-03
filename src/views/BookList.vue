@@ -19,17 +19,23 @@ export default {
 </script>
 
 <template>
-    <h1 class="text-center text-2xl font-bold mb-4">Total de libros: {{ totalDeLibros }}</h1>
-    <div id="list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+    <h1 v-if="totalDeLibros" class="text-center text-2xl font-bold mb-4">
+        Total de libros: {{ totalDeLibros }}
+    </h1>
+    <h1 v-else class="text-center text-2xl font-bold mb-4">
+        No hay libros disponibles
+    </h1>
+
+    <div v-if="books.length > 0" :class="['grid gap-x-24 gap-y-12 mx-auto', books.length >= 3 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : books.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1']">
         <book-item v-for="book in books" :key="book.id" :book="book">
-            <button class="addCart button" @click="addBookToCart(book)" v-if="!bookOnCart(book.id)">
-                <span><i class="bi bi-cart-plus"></i></span>
+            <button class="addCart button animate-fade-in-up" @click="addBookToCart(book)" v-if="!bookOnCart(book.id)">
+                <i class="bi bi-cart-plus"></i>
             </button>
-            <button class="editBook button" @click="editarLibro(book)">
-                <span><i class="bi bi-pencil"></i></span>
+            <button class="editBook button animate-fade-in-up animate-delay-100" @click="editarLibro(book)">
+                <i class="bi bi-pencil"></i>
             </button>
-            <button class="remove button" @click="deleteBook(book.id)">
-                <span><i class="bi bi-trash"></i></span>
+            <button class="remove button animate-fade-in-up animate-delay-200" @click="deleteBook(book.id)">
+                <i class="bi bi-trash"></i>
             </button>
         </book-item>
     </div>
